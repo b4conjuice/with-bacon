@@ -54,14 +54,14 @@ const Page = ({ title = DEFAULT_TITLE, children }) => {
                 className={
                   pathname === url || pathname.includes(`${url}/`)
                     ? 'border-b-2 border-cobalt'
-                    : ''
+                    : 'hover:border-b-2 hover:border-cobalt'
                 }
               >
                 {pathname === url ? (
                   <span>{text}</span>
                 ) : (
                   <Link href={url}>
-                    <a className="hover:text-blue-600">{text}</a>
+                    <a>{text}</a>
                   </Link>
                 )}
               </li>

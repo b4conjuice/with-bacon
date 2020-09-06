@@ -1,14 +1,20 @@
 import Page from '@/components/page'
+import Main from '@/components/main'
 import Title from '@/components/title'
 
 const Home = () => (
   <Page>
-    <main className="flex flex-col flex-grow space-y-4">
+    <Main className="flex flex-col space-y-4">
       <Title>
-        with{' '}
-        <span role="img" aria-label="bacon">
-          🥓
-        </span>
+        <a
+          className="hover:underline"
+          href="https://github.com/b4conjuice/with-bacon"
+        >
+          with bacon{' '}
+          <span role="img" aria-label="bacon">
+            🥓
+          </span>
+        </a>
       </Title>
       <p className="text-2xl text-center text-cobalt sm:text-3xl">
         built with{' '}
@@ -30,7 +36,23 @@ const Home = () => (
           tailwind.css
         </a>
       </p>
-    </main>
+      <p className="text-2xl text-center text-cobalt sm:text-3xl">
+        <img
+          className="inline w-8 h-8 rounded-full"
+          src="/icon.png"
+          alt="bacon"
+        />{' '}
+        icon from{' '}
+        <a
+          className="font-semibold hover:underline"
+          href="https://buildicon.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          buildicon
+        </a>
+      </p>
+    </Main>
   </Page>
 )
 
