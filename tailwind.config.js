@@ -7,6 +7,55 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    typography: theme => ({
+      xl: {
+        css: {
+          h1: {
+            marginTop: 0,
+            fontWeight: 'bold',
+          },
+          h2: {
+            marginTop: '2rem',
+            marginBottom: '1rem',
+          },
+        },
+      },
+      default: {
+        css: {
+          color: theme('colors.cobalt'),
+          strong: theme('colors.cobalt'),
+          h1: {
+            color: theme('colors.cobalt'),
+            fontWeight: 'bold',
+            textAlign: 'center',
+          },
+          h2: {
+            marginTop: '1.5rem',
+            marginBottom: '.75rem',
+          },
+          a: {
+            color: theme('colors.cb-dusty-blue'),
+            fontWeight: 'bold',
+            textDecoration: 'none',
+          },
+          img: {
+            width: '2rem',
+            height: '2rem',
+            borderRadius: '9999px',
+          },
+          'ul > li:before': {
+            backgroundColor: theme('colors.cb-dusty-blue'),
+          },
+        },
+      },
+      sm: {
+        css: {
+          h1: {
+            fontSize: theme('text.4xl'),
+          },
+        },
+      },
+    }),
     extend: {
       colors: {
         cobalt: '#193549',
@@ -25,5 +74,5 @@ module.exports = {
   variants: {
     borderWidth: ['responsive', 'hover'],
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }

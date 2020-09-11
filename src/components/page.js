@@ -2,18 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-const DEFAULT_TITLE = 'with bacon'
-
-const nav = [
-  {
-    url: '/',
-    text: 'home',
-  },
-  {
-    url: '/about',
-    text: 'about',
-  },
-]
+const DEFAULT_TITLE = 'with bacon markdown'
 
 const Page = ({ title = DEFAULT_TITLE, children }) => {
   const { pathname } = useRouter()
@@ -45,30 +34,6 @@ const Page = ({ title = DEFAULT_TITLE, children }) => {
           {title === DEFAULT_TITLE ? title : `${title} - ${DEFAULT_TITLE}`}
         </title>
       </Head>
-      <header>
-        <nav className="px-2 py-1 text-lg">
-          <ul className="flex justify-center space-x-3 text-cobalt">
-            {nav.map(({ url, text }) => (
-              <li
-                key={url}
-                className={
-                  pathname === url || pathname.includes(`${url}/`)
-                    ? 'border-b-2 border-cobalt'
-                    : 'hover:border-b-2 hover:border-cobalt'
-                }
-              >
-                {pathname === url ? (
-                  <span>{text}</span>
-                ) : (
-                  <Link href={url}>
-                    <a>{text}</a>
-                  </Link>
-                )}
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </header>
       {children}
     </div>
   )
