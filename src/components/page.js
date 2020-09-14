@@ -18,7 +18,7 @@ const nav = [
 const Page = ({ title = DEFAULT_TITLE, children }) => {
   const { pathname } = useRouter()
   return (
-    <div className="flex flex-col min-h-screen text-gray-900 bg-gray-100">
+    <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-cobalt dark:text-gray-100 text-cobalt">
       <Head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="mobile-web-app-capable" content="yes" />
@@ -47,14 +47,14 @@ const Page = ({ title = DEFAULT_TITLE, children }) => {
       </Head>
       <header>
         <nav className="px-2 py-1 text-lg">
-          <ul className="flex justify-center space-x-3 text-cobalt">
+          <ul className="flex justify-center space-x-3">
             {nav.map(({ url, text }) => (
               <li
                 key={url}
                 className={
                   pathname === url || pathname.includes(`${url}/`)
-                    ? 'border-b-2 border-cobalt'
-                    : 'hover:border-b-2 hover:border-cobalt'
+                    ? 'border-b-2 border-cobalt dark:border-gray-100'
+                    : 'hover:border-b-2 hover:border-cobalt dark:hover:border-gray-100'
                 }
               >
                 {pathname === url ? (
@@ -70,6 +70,56 @@ const Page = ({ title = DEFAULT_TITLE, children }) => {
         </nav>
       </header>
       {children}
+      <footer className="py-4 text-2xl text-center text-gray-100 bg-cobalt dark:bg-cb-dark-blue sm:text-3xl">
+        <div className="lg:container lg:mx-auto lg:max-w-3xl">
+          <div>
+            built{' '}
+            <a
+              className="font-semibold hover:underline text-cb-yellow"
+              href="https://with-bacon.niel.to"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              with bacon{' '}
+              <span role="img" aria-label="bacon">
+                🥓
+              </span>
+            </a>
+          </div>
+          <ul className="flex justify-center space-x-4 text-xl">
+            <li>
+              <a
+                className="hover:underline text-cb-pink"
+                href="https://nextjs.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                next.js
+              </a>
+            </li>
+            <li>
+              <a
+                className="hover:underline text-cb-pink"
+                href="https://tailwindcss.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                tailwind.css
+              </a>
+            </li>
+            <li>
+              <a
+                className="hover:underline text-cb-pink"
+                href="https://vercel.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                vercel
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
   )
 }
