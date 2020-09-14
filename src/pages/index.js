@@ -16,10 +16,10 @@ const Home = () => (
           </span>
         </a>
       </Title>
-      <p className="text-2xl text-center text-cobalt sm:text-3xl">
+      <p className="text-2xl text-center sm:text-3xl">
         built with{' '}
         <a
-          className="font-semibold hover:underline"
+          className="font-semibold hover:underline dark:text-cb-light-blue"
           href="https://nextjs.org"
           target="_blank"
           rel="noopener noreferrer"
@@ -28,7 +28,7 @@ const Home = () => (
         </a>{' '}
         and{' '}
         <a
-          className="font-semibold hover:underline"
+          className="font-semibold hover:underline dark:text-cb-light-blue"
           href="https://tailwindcss.com"
           target="_blank"
           rel="noopener noreferrer"
@@ -36,7 +36,7 @@ const Home = () => (
           tailwind.css
         </a>
       </p>
-      <p className="text-2xl text-center text-cobalt sm:text-3xl">
+      <p className="text-2xl text-center sm:text-3xl">
         <img
           className="inline w-8 h-8 rounded-full"
           src="/icon.png"
@@ -44,7 +44,7 @@ const Home = () => (
         />{' '}
         icon from{' '}
         <a
-          className="font-semibold hover:underline"
+          className="font-semibold hover:underline dark:text-cb-orange"
           href="https://buildicon.netlify.app/"
           target="_blank"
           rel="noopener noreferrer"
@@ -53,56 +53,6 @@ const Home = () => (
         </a>
       </p>
     </Main>
-    <footer className="py-4 text-2xl text-center text-gray-100 bg-cobalt sm:text-3xl">
-      <div className="lg:container lg:mx-auto lg:max-w-3xl">
-        <div>
-          built{' '}
-          <a
-            className="font-semibold hover:underline text-cb-yellow"
-            href="https://with-bacon.niel.to"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            with bacon{' '}
-            <span role="img" aria-label="bacon">
-              🥓
-            </span>
-          </a>
-        </div>
-        <ul className="flex justify-center space-x-4 text-xl">
-          <li>
-            <a
-              className="hover:underline text-cb-pink"
-              href="https://nextjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              next.js
-            </a>
-          </li>
-          <li>
-            <a
-              className="hover:underline text-cb-pink"
-              href="https://tailwindcss.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              tailwind.css
-            </a>
-          </li>
-          <li>
-            <a
-              className="hover:underline text-cb-pink"
-              href="https://vercel.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              vercel
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer>
   </Page>
 )
 
