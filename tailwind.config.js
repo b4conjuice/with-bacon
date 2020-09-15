@@ -39,6 +39,10 @@ module.exports = {
             fontWeight: 'bold',
             textDecoration: 'none',
           },
+          'h2 > a': {
+            color: false,
+            '@apply text-cb-dusty-blue dark:text-cb-yellow': '',
+          },
           img: {
             width: '2rem',
             height: '2rem',
