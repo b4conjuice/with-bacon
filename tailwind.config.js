@@ -35,7 +35,7 @@ module.exports = {
           a: {
             // color: theme('colors.cb-dusty-blue'),
             color: false,
-            '@apply text-cb-dusty-blue dark:text-cb-light-blue': '',
+            '@apply text-cb-dusty-blue dark:text-cb-pink': '',
             fontWeight: 'bold',
             textDecoration: 'none',
           },
