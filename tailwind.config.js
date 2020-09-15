@@ -32,5 +32,4 @@ module.exports = {
     backgroundColor: ['responsive', 'hover', 'focus', 'dark'],
     borderColor: ['responsive', 'hover', 'dark'],
   },
-  plugins: [],
 }
