@@ -70,7 +70,7 @@ const Page = ({ title = DEFAULT_TITLE, children }) => {
         </nav>
       </header>
       {children}
-      <footer className="py-4 text-2xl text-center text-gray-100 bg-cobalt dark:bg-cb-dark-blue sm:text-3xl">
+      <footer className="pb-4 text-2xl text-center text-gray-100 lg:pt-4 bg-cobalt dark:bg-cb-dark-blue sm:text-3xl">
         <div className="lg:container lg:mx-auto lg:max-w-3xl">
           <div>
             built{' '}
