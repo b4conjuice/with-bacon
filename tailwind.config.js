@@ -1,11 +1,4 @@
 module.exports = {
-  experimental: {
-    darkModeVariant: true,
-  },
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
   purge: [
     './src/components/**/*.{js,ts,jsx,tsx}',
     './src/pages/**/*.{js,ts,jsx,tsx}',
@@ -32,4 +25,5 @@ module.exports = {
     backgroundColor: ['responsive', 'hover', 'focus', 'dark'],
     borderColor: ['responsive', 'hover', 'dark'],
   },
+  darkMode: 'media',
 }

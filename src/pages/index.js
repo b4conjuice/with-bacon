@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import Page from '@/components/page'
 import Main from '@/components/main'
 import Title from '@/components/title'
@@ -37,11 +39,6 @@ const Home = () => (
         </a>
       </p>
       <p className="text-2xl text-center sm:text-3xl">
-        <img
-          className="inline w-8 h-8 rounded-full"
-          src="/icon.png"
-          alt="bacon"
-        />{' '}
         icon from{' '}
         <a
           className="font-semibold hover:underline dark:text-cb-orange"
@@ -51,6 +48,15 @@ const Home = () => (
         >
           buildicon
         </a>
+      </p>
+      <p className="text-center">
+        <Image
+          className="w-8 h-8 rounded-full"
+          src="/icon.png"
+          alt="bacon"
+          width="32"
+          height="32"
+        />
       </p>
     </Main>
   </Page>
