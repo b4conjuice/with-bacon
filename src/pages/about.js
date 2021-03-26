@@ -1,6 +1,7 @@
 import Page from '@/components/page'
 import Main from '@/components/main'
 import Title from '@/components/title'
+import copyToClipboard from '@/lib/copyToClipboard'
 
 const colors = [
   { name: 'Yellow', hex: '#ffc600', light: true },
@@ -21,7 +22,7 @@ const About = () => (
       <ul className="flex justify-center space-x-4 text-2xl sm:text-3xl">
         <li>
           <a
-            className="font-semibold hover:underline dark:hover:text-cb-mint dark:text-cb-light-blue"
+            className="font-semibold hover:underline dark:hover:text-cb-mint text-[#dbdddf]"
             href="https://github.com/b4conjuice"
             target="_blank"
             rel="noopener noreferrer"
@@ -38,7 +39,7 @@ const About = () => (
         </li>
         <li>
           <a
-            className="font-semibold hover:underline dark:hover:text-cb-mint dark:text-cb-light-blue"
+            className="font-semibold hover:underline dark:hover:text-cb-mint text-[#1da1f1]"
             href="https://twitter.com/b4conjuice"
             target="_blank"
             rel="noopener noreferrer"
@@ -65,11 +66,11 @@ const About = () => (
           cobalt2
         </a>
       </h2>
-      <ul className="grid grid-cols-3 gap-4 text-2xl text-cobalt sm:text-3xl md:max-w-4xl md:mx-auto">
+      <ul className="grid gap-4 text-2xl md:grid-cols-3 text-cobalt sm:text-3xl md:max-w-4xl md:mx-auto">
         {colors.map(({ name, hex, light }) => (
           <li
             key={name}
-            className={`flex items-center shadow rounded-lg ${
+            className={`flex items-center shadow rounded-lg transition-colors duration-200 ${
               light
                 ? `bg-cobalt dark:bg-cb-dark-blue hover:bg-cb-off-blue ${
                     name === 'Yellow'
@@ -97,7 +98,11 @@ const About = () => (
                   }`
             }`}
           >
-            <button className="flex-grow p-4" type="button">
+            <button
+              className="flex-grow p-4"
+              type="button"
+              onClick={() => copyToClipboard(hex)}
+            >
               <div className="leading-none">{name}</div>
               <div className="text-sm md:text-2xl">{hex}</div>
             </button>

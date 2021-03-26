@@ -49,7 +49,7 @@ const Home = () => (
           buildicon
         </a>
       </p>
-      <p className="text-center">
+      <div className="text-center">
         <Image
           className="w-8 h-8 rounded-full"
           src="/icon.png"
@@ -57,7 +57,7 @@ const Home = () => (
           width="32"
           height="32"
         />
-      </p>
+      </div>
     </Main>
   </Page>
 )

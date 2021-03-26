@@ -19,11 +19,5 @@ module.exports = {
       },
     },
   },
-  variants: {
-    borderWidth: ['responsive', 'hover', 'dark'],
-    textColor: ['responsive', 'hover', 'focus', 'dark'],
-    backgroundColor: ['responsive', 'hover', 'focus', 'dark'],
-    borderColor: ['responsive', 'hover', 'dark'],
-  },
   darkMode: 'media',
 }
