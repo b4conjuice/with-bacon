@@ -3,10 +3,11 @@ import Image from 'next/image'
 import Page from '@/components/page'
 import Main from '@/components/main'
 import Title from '@/components/title'
+import icon from '../../public/icon.png'
 
 const Home = () => (
   <Page>
-    <Main className="flex flex-col justify-center space-y-4">
+    <Main className="flex flex-col items-center justify-center space-y-4">
       <Title>
         <a
           className="hover:underline"
@@ -49,13 +50,14 @@ const Home = () => (
           buildicon
         </a>
       </p>
-      <div className="text-center">
+      <div className="w-8 h-8 text-center">
         <Image
-          className="w-8 h-8 rounded-full"
-          src="/icon.png"
+          className="rounded-full"
+          src={icon}
           alt="bacon"
-          width="32"
-          height="32"
+          // width="32"
+          // height="32"
+          placeholder="blur"
         />
       </div>
     </Main>
