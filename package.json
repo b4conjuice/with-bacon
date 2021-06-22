@@ -35,6 +35,9 @@
     "extends": [
       "baconjuice",
       "next"
-    ]
+    ],
+    "rules": {
+      "react/display-name": "off"
+    }
   }
 }
