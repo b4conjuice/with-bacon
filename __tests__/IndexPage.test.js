@@ -1,4 +1,4 @@
-import { render } from '@/lib/test-utils'
+import { render } from '@testing-library/react'
 import IndexPage from '@/pages/index'
 
 it('renders index page', () => {

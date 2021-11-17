@@ -25,6 +25,11 @@
     "tailwindcss": "^2.2.19"
   },
   "license": "MIT",
+  "babel": {
+    "presets": [
+      "next/babel"
+    ]
+  },
   "eslintConfig": {
     "extends": [
       "baconjuice",

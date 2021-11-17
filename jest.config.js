@@ -15,5 +15,6 @@ module.exports = {
     '@/components/(.*)': ['<rootDir>/src/components/$1'],
     '@/lib/(.*)': ['<rootDir>/src/lib/$1'],
     '@/pages/(.*)': ['<rootDir>/src/pages/$1'],
+    '^.+\\.(jpg|jpeg|png|gif|webp|avif|svg)$': `<rootDir>/__mocks__/fileMock.js`,
   },
 }
