@@ -17,18 +17,18 @@ const colors = [
 
 const About = () => (
   <Page title="about">
-    <Main className="flex flex-col justify-center p-4 space-y-4 text-center">
+    <Main className="flex flex-col justify-center space-y-4 p-4 text-center">
       <Title>about</Title>
       <ul className="flex justify-center space-x-4 text-2xl sm:text-3xl">
         <li>
           <a
-            className="font-semibold hover:underline dark:hover:text-cb-mint text-[#dbdddf]"
+            className="font-semibold text-[#dbdddf] hover:underline dark:hover:text-cb-mint"
             href="https://github.com/b4conjuice"
             target="_blank"
             rel="noopener noreferrer"
           >
             <svg
-              className="w-6 h-6 fill-current"
+              className="h-6 w-6 fill-current"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
@@ -39,13 +39,13 @@ const About = () => (
         </li>
         <li>
           <a
-            className="font-semibold hover:underline dark:hover:text-cb-mint text-[#1da1f1]"
+            className="font-semibold text-[#1da1f1] hover:underline dark:hover:text-cb-mint"
             href="https://twitter.com/b4conjuice"
             target="_blank"
             rel="noopener noreferrer"
           >
             <svg
-              className="w-6 h-6 fill-current"
+              className="h-6 w-6 fill-current"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
@@ -66,13 +66,13 @@ const About = () => (
           cobalt2
         </a>
       </h2>
-      <ul className="grid gap-4 text-2xl md:grid-cols-3 text-cobalt sm:text-3xl md:max-w-4xl md:mx-auto">
+      <ul className="grid gap-4 text-2xl text-cobalt sm:text-3xl md:mx-auto md:max-w-4xl md:grid-cols-3">
         {colors.map(({ name, hex, light }) => (
           <li
             key={name}
-            className={`flex items-center shadow rounded-lg transition-colors duration-200 ${
+            className={`flex items-center rounded-lg shadow transition-colors duration-200 ${
               light
-                ? `bg-cobalt dark:bg-cb-dark-blue hover:bg-cb-off-blue ${
+                ? `bg-cobalt hover:bg-cb-off-blue dark:bg-cb-dark-blue ${
                     name === 'Yellow'
                       ? 'text-cb-yellow'
                       : name === 'Orange'

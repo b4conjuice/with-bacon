@@ -18,7 +18,7 @@ const nav = [
 const Page = ({ title = DEFAULT_TITLE, children }) => {
   const { pathname } = useRouter()
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-cobalt dark:text-gray-100 text-cobalt">
+    <div className="flex min-h-screen flex-col bg-gray-100 text-cobalt dark:bg-cobalt dark:text-gray-100">
       <Head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="mobile-web-app-capable" content="yes" />
@@ -70,12 +70,12 @@ const Page = ({ title = DEFAULT_TITLE, children }) => {
         </nav>
       </header>
       {children}
-      <footer className="pb-4 text-2xl text-center text-gray-100 lg:pt-4 bg-cobalt dark:bg-cb-dark-blue sm:text-3xl">
+      <footer className="bg-cobalt pb-4 text-center text-2xl text-gray-100 dark:bg-cb-dark-blue sm:text-3xl lg:pt-4">
         <div className="lg:container lg:mx-auto lg:max-w-3xl">
           <div>
             built{' '}
             <a
-              className="font-semibold hover:underline text-cb-yellow"
+              className="font-semibold text-cb-yellow hover:underline"
               href="https://with-bacon.niel.to"
               target="_blank"
               rel="noopener noreferrer"
@@ -89,7 +89,7 @@ const Page = ({ title = DEFAULT_TITLE, children }) => {
           <ul className="flex justify-center space-x-4 text-xl">
             <li>
               <a
-                className="hover:underline text-cb-pink"
+                className="text-cb-pink hover:underline"
                 href="https://nextjs.org"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -99,7 +99,7 @@ const Page = ({ title = DEFAULT_TITLE, children }) => {
             </li>
             <li>
               <a
-                className="hover:underline text-cb-pink"
+                className="text-cb-pink hover:underline"
                 href="https://tailwindcss.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -109,7 +109,7 @@ const Page = ({ title = DEFAULT_TITLE, children }) => {
             </li>
             <li>
               <a
-                className="hover:underline text-cb-pink"
+                className="text-cb-pink hover:underline"
                 href="https://vercel.com"
                 target="_blank"
                 rel="noopener noreferrer"

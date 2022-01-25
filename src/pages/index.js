@@ -19,7 +19,7 @@ const Home = () => (
           </span>
         </a>
       </Title>
-      <p className="text-2xl text-center sm:text-3xl">
+      <p className="text-center text-2xl sm:text-3xl">
         built with{' '}
         <a
           className="font-semibold hover:underline dark:text-cb-light-blue"
@@ -39,7 +39,7 @@ const Home = () => (
           tailwind.css
         </a>
       </p>
-      <p className="text-2xl text-center sm:text-3xl">
+      <p className="text-center text-2xl sm:text-3xl">
         icon from{' '}
         <a
           className="font-semibold hover:underline dark:text-cb-orange"
@@ -50,7 +50,7 @@ const Home = () => (
           buildicon
         </a>
       </p>
-      <div className="w-8 h-8 text-center">
+      <div className="h-8 w-8 text-center">
         <Image
           className="rounded-full"
           src={icon}
