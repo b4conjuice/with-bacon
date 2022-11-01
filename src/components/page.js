@@ -60,9 +60,7 @@ const Page = ({ title = DEFAULT_TITLE, children }) => {
                 {pathname === url ? (
                   <span>{text}</span>
                 ) : (
-                  <Link href={url}>
-                    <a>{text}</a>
-                  </Link>
+                  <Link href={url}>{text}</Link>
                 )}
               </li>
             ))}
