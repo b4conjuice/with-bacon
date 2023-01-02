@@ -33,7 +33,7 @@
     ],
     "rules": {
       "react/display-name": "off",
-      "import/extensions": "never"
+      "import/extensions": 0
     }
   }
 }
