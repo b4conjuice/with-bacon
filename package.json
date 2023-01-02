@@ -29,11 +29,11 @@
   "license": "MIT",
   "eslintConfig": {
     "extends": [
-      "baconjuice",
-      "next"
+      "baconjuice"
     ],
     "rules": {
-      "react/display-name": "off"
+      "react/display-name": "off",
+      "import/extensions": "never"
     }
   }
 }
